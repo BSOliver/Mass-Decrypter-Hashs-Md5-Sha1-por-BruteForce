@@ -1,0 +1,1 @@
+# Mass-Decrypter-Hashs-Md5-Sha1-por-BruteForce
