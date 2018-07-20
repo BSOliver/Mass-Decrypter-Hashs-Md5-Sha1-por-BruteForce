@@ -35,18 +35,18 @@ if(isset($argv[1])){
 		     	echo $ind . "\n";
 		     	if(isset($argv[6])){
 		     		if($argv[6] == "MD5"){
-		     			echo "As Hashs que forem descriptogradas serão salvas no diretório hashs/ e no arquivo hashs_descriptogradas.txt\n\nEfetuando Ataque...\n\n";
+		     			echo "As Hashs que forem descriptografadas serão salvas no diretório hashs/ e no arquivo hashs_descriptogradas.txt\n\nEfetuando Ataque...\n\n";
 		     	foreach($hashs as $hash){
 		     		foreach($tentativas as $pw){
 		     			if(md5($pw) == $hash){
 		     				echo "Hash Descriptografada: " . $hash . ":" . $pw . "\n";
 		     				if(file_exists("hashs/")){
-		     					$file = fopen("hashs/hashs_descriptogradas.txt","a");
+		     					$file = fopen("hashs/hashs_descriptografadas.txt","a");
 		     				    fwrite($file, $hash . ":" . $pw . "\r\n");
 		     				    fclose($file);
 		     				}else{
 		     					mkdir("hashs/");
-		     					$file = fopen("hashs/hashs_descriptogradas.txt","a");
+		     					$file = fopen("hashs/hashs_descriptografadas.txt","a");
 		     				    fwrite($file, $hash . ":" . $pw . "\r\n");
 		     				    fclose($file);
 		     				}
@@ -62,12 +62,12 @@ if(isset($argv[1])){
 		     					if(sha1($pw) == $hash){
 		     						echo "Hash Descriptografada: " . $hash . ":" . $pw . "\n";
 		     						if(file_exists("hashs/")){
-		     					$file = fopen("hashs/hashs_descriptogradas.txt","a");
+		     					$file = fopen("hashs/hashs_descriptografadas.txt","a");
 		     				    fwrite($file, $hash . ":" . $pw . "\r\n");
 		     				    fclose($file);
 		     				}else{
 		     					mkdir("hashs/");
-		     					$file = fopen("hashs/hashs_descriptogradas.txt","a");
+		     					$file = fopen("hashs/hashs_descriptografadas.txt","a");
 		     				    fwrite($file, $hash . ":" . $pw . "\r\n");
 		     				    fclose($file);
 		     				}
